@@ -16,6 +16,40 @@
 - Node.js 20.5.0+
 - Python 3.11+（用于后端服务）
 
+##工程结构：
+
+ai-pcb-agent/
+
+├── eda-plugin/          # 嘉立创EDA插件（TS/JS）
+
+│   ├── extension.json   # 官方必填配置（UUID/版本/入口）
+
+│   ├── src/
+
+│   │   ├── index.ts     # 插件入口（注册面板/API）
+
+│   │   ├── panel.html   # UI面板
+
+│   │   ├── eda-api.ts  # 封装嘉立创pro-api
+
+│   │   └── agent-client.ts # 调用后端Agent
+
+│   └── package.json
+
+├── agent-backend/       # Python后端（FastAPI）
+
+│   ├── main.py
+
+│   ├── llm/             # 大模型调用
+
+│   ├── kg/              # 硬件知识图谱
+
+│   ├── multisim/        # Multisim COM自动化
+
+│   └── netlist/         # 网表转换
+
+└── docs/                # PRD/API文档
+
 ## 安装步骤
 
 ### 1. 安装前端依赖
