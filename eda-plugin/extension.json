@@ -1,0 +1,101 @@
+{
+	"name": "ai-pcb-agent",
+	"uuid": "6f76485ab50845c2a7ffc1e61c29da85",
+	"displayName": "AI PCB设计助手",
+	"description": "基于大模型与知识图谱驱动的PCB设计+仿真一体化自动化插件",
+	"version": "1.0.0",
+	"publisher": "AI PCB Team",
+	"engines": {
+		"eda": "^2.3.0"
+	},
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "extension-store",
+		"url": ""
+	},
+	"categories": "AI Tools",
+	"keywords": [
+		"AI",
+		"PCB",
+		"自动化",
+		"布局",
+		"仿真"
+	],
+	"images": {
+		"logo": "./images/logo.png"
+	},
+	"homepage": "https://pro.lceda.cn",
+	"bugs": "https://lceda.cn/page/feedback?originPage=other",
+	"activationEvents": {},
+	"entry": "./dist/index",
+	"dependentExtensions": {},
+	"headerMenus": {
+		"home": [
+			{
+				"id": "AIPCB",
+				"title": "AI PCB助手",
+				"menuItems": [
+					{
+						"id": "OpenPanel",
+						"title": "打开AI助手面板",
+						"registerFn": "openPanel"
+					}
+				]
+			}
+		],
+		"sch": [
+			{
+				"id": "AIPCB",
+				"title": "AI PCB助手",
+				"menuItems": [
+					{
+						"id": "OpenPanel",
+						"title": "打开AI助手面板",
+						"registerFn": "openPanel"
+					},
+					{
+						"id": "AutoLayout",
+						"title": "AI自动布局",
+						"registerFn": "autoLayout"
+					},
+					{
+						"id": "RunSimulation",
+						"title": "运行仿真",
+						"registerFn": "runSimulation"
+					}
+				]
+			}
+		],
+		"pcb": [
+			{
+				"id": "AIPCB",
+				"title": "AI PCB助手",
+				"menuItems": [
+					{
+						"id": "OpenPanel",
+						"title": "打开AI助手面板",
+						"registerFn": "openPanel"
+					},
+					{
+						"id": "AutoLayout",
+						"title": "AI自动布局",
+						"registerFn": "autoLayout"
+					},
+					{
+						"id": "RunSimulation",
+						"title": "运行仿真",
+						"registerFn": "runSimulation"
+					}
+				]
+			}
+		]
+	},
+	"panels": {
+		"ai-pcb-panel": {
+			"title": "AI PCB设计助手",
+			"width": 380,
+			"height": 600,
+			"iframeUrl": "./iframe/index.html"
+		}
+	}
+}
